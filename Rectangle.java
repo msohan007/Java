@@ -1,22 +1,23 @@
-package Class;
+import java.util.Scanner;
 
-public class Rectangle {
+public class Rectangle {  //Name of the public class: Rectangle 
 
-    private int length;
-    private int width;
+    int length;
+    int width;
 
-    public Rectangle(int length, int width) {
-        this.length = length;
-        this.width = width;
-    }
-
-    public int calculateArea() {
-
-        return length * width;
+    int myRectangleArea() {
+        return (2 * length + width);
 
     }
-    
-    public void display() {
-        System.out.println("Rectangle Area : " + calculateArea());
+
+    Rectangle() {
+
+        Scanner Value = new Scanner(System.in);
+        System.out.println("Please enter length :");
+        length = Value.nextInt();
+        System.out.println("Please enter width :");
+        width = Value.nextInt();
+
     }
+
 }
